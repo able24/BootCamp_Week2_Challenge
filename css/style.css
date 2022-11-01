@@ -173,6 +173,10 @@ main {
   display: flex;  
 }
 
+.portfolio figure img {
+  object-fit: cover;
+}
+
 
 .work figure img:hover {
   width: 300px;
