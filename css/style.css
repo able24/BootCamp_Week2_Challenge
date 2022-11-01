@@ -1,0 +1,212 @@
+/*Declaring Variables*/
+
+:root {
+  --white: #ffffff;
+  --black: #444040;
+  --green: #05a505;
+}
+
+
+/* Universal Selectors*/
+* {
+  box-sizing: border-box;
+}
+
+/* HTML and Body Default Settings*/
+
+html, body{
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #4444;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  display: grid;
+  grid-template-rows: 50px auto 60px;
+  grid-template-areas:
+  'header header'
+  'main main'
+  'footer footer';
+}
+
+/*header Selector*/
+
+header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--black);
+  border-bottom: 5px solid var(--green);
+  padding: 10px;
+  }
+
+  header h3 {
+    margin-left: 4%;
+    color: var(--white);
+  }
+
+  header nav a {
+    margin: 7px;
+    text-decoration: none;
+    padding: 10px;
+    color: var(--white);
+    
+  }
+
+/*Main Page Topography Layout*/
+
+main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 55% 45%;
+  grid-template-areas:
+  'h1 figure'
+  'about about'
+  'portfolio portfolio';
+}
+  
+
+.h1 {
+  grid-area: h1;
+}
+
+#fig {
+  grid-area: figure;
+  margin-top: 11%;
+}
+
+.about {
+  grid-area: about;
+}
+
+.portfolio {
+  grid-area: portfolio;
+}
+
+/* Styling of First Section*/
+
+#intro {
+  text-align: center;
+  margin: 9%;
+  border-bottom: 3px solid var(--black);
+  
+}
+
+
+#first_h1 {
+  font-size: 40px;
+  color: var(--black);
+}
+
+#intro p {
+  text-align: left;
+}
+
+.main form {
+  display: inline;
+}
+
+.main button {
+  margin: 4%;
+  background: var(--green);
+  border-radius: 8px;
+  padding: 5px;
+  cursor: pointer;
+  color: var(--white);
+}
+
+/*Styling of The About Section*/
+
+.about {
+  display: grid;
+  grid-template-columns: 16% 84%;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+  'title paragraph'
+  'tile paragraph';
+}
+
+.title {
+  grid-area: title;
+  font-size: 40px;
+   margin-left: 35%;
+   border-right: 4px solid var(--green);
+   height: 100%;
+
+}
+
+.about p {
+  grid-area: paragraph;
+  margin-top: 2.5%;
+  margin-left: 2%;
+  margin-right: 5%;
+
+}
+
+
+/*Styling of The Portfolio Section*/
+
+.portfolio {
+  display: grid;
+  grid-template-columns: 16% 84%;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+  'title work'
+  'tile work';
+}
+
+.topic {
+  grid-area: title;
+  font-size: 40px;
+   margin-left: 35%;
+   border-right: 4px solid var(--green);
+   height: 100%;
+}
+
+.work {
+  grid-area: work;
+  margin-top: 1%;
+  display: flex;  
+}
+
+
+.work figure img:hover {
+  width: 300px;
+  height: 200px;
+}
+
+
+/*Styling the footer*/
+
+footer {
+  grid-area: footer;
+  background-color: var(--black);
+  border-bottom: 5px solid var(--green);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+footer h3 {
+  margin-left: 3%;
+  color: var(--white);
+
+}
+
+footer p {
+  color: var(--white);
+}
+
+footer a {
+  margin-right: 3%;
+  text-decoration: none;
+  color: var(--white);
+}
+
+
+
